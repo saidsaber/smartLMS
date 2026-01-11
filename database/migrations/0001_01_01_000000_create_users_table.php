@@ -15,8 +15,11 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
+            $table->string('phone')->nullable();
+            $table->text('password');
+            $table->enum('role' , ['web' , 'teacher' , 'admin'])->default('web');
+            $table->enum('status' , ['active' , 'blocked'])->default('active');
+            $table->text('path')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
