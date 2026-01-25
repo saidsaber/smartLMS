@@ -13,7 +13,6 @@ return new class extends Migration
     {
         Schema::create('videos', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('course_id')->constrained();
             $table->string('legth');
             $table->text('path');
             $table->timestamps();

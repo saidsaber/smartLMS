@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('name');
             $table->double('price');
             $table->text('description');
+            $table->text('image');
             $table->boolean('is_active'); 
             $table->timestamps();
         });

@@ -11,12 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('videos_users', function (Blueprint $table) {
+        Schema::create('modules', function (Blueprint $table) {
             $table->id();
-
-            $table->foreignId('user_id')->constrained();
-            $table->time('watched_time')->nullable();
-            $table->boolean('is_done')->default(0);
+            $table->foreignId('course_id')->constrained();
+            $table->string('name');
             $table->timestamps();
         });
     }
@@ -26,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('videos_users');
+        Schema::dropIfExists('module');
     }
 };

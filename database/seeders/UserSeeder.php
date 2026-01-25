@@ -30,6 +30,13 @@ class UserSeeder extends Seeder
                     'status' => 'active',
                     'password' => Hash::make('saidsaber')
                 ],
+                [
+                    'name' => 'teacher',
+                    'email' => 'teacher@teacher.com',
+                    'role' => 'teacher',
+                    'status' => 'active',
+                    'password' => Hash::make('saidsaber')
+                ],
             ]
         );
     }
